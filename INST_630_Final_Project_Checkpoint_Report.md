@@ -50,7 +50,7 @@ Since submitting the initial project proposal, the core frontend screens, intera
 5. **Data & External APIs Identified and Implemented:**
    * Implemented `googleCalendarUrl()` and `downloadICS()` in `client/js/format.js` plus **Google Maps building directions links** (`campusMapsUrl()`) in `client/js/modals.js`.
 6. **GitHub Repository / Site Established:**
-   * We will be setting up a new GitHub repository for the project; static bundle build scripts (`client/build.js`) and Vercel API proxy rewrites (`client/vercel.json` and `server/vercel.json`) are already configured.
+   * Published the project codebase to the GitHub repository [FinalProject-INST630](https://github.com/jahnavi5-umd/FinalProject-INST630) (`https://github.com/jahnavi5-umd/FinalProject-INST630`) and deployed the live client site at [TerpEvents](https://terpevents-ui.vercel.app/) (`https://terpevents-ui.vercel.app/`), backed by the static bundle build scripts (`client/build.js`) and Vercel configuration (`client/vercel.json` and `server/vercel.json`).
 
 ---
 
@@ -68,7 +68,7 @@ The table below summarizes the pages and features currently implemented in `clie
 | **Create / Edit Group & Event Forms** | `renderGroupModal()`, `renderEventModal()` (`client/js/modals.js`) | Validated bottom-sheet forms for creating/editing student groups and publishing/editing events (cover photo presets, date/time validation, capacity bounds, host org selection) | **Complete** |
 | **Event Details, QR Pass & External APIs** | `renderRsvpModal()`, `client/js/format.js` | Event details bottom sheet with Google Maps building directions link, RSVP QR pass, `googleCalendarUrl()`, and `downloadICS()` | **Complete** |
 | **Backend Server (`server/`)** | `server/src/app.js`, `routes/*`, `models/*` | Fully functional Express + MongoDB REST API with Google OAuth verification, JWT cookies, events, organizations, and admin endpoints | **Complete** |
-| **New GitHub Repository Setup** | Project Root | Initialize and push codebase to the new project GitHub repository | **Remaining** |
+| **GitHub Repository & Live Site** | [FinalProject-INST630](https://github.com/jahnavi5-umd/FinalProject-INST630) / [TerpEvents](https://terpevents-ui.vercel.app/) | Published codebase on GitHub and deployed live client application on Vercel (`client/vercel.json`, `server/vercel.json`) | **Complete** |
 | **Discover Screen (`/discover`)** | Planned route in `client/js/main.js` | Dedicated full-catalog search and 10-category filter directory page | **Remaining** |
 | **Profile & Settings Screen (`/profile`)** | Planned route in `client/js/main.js` | Dedicated user profile page with stats, favorite category preferences, notification toggles, and multi-device sign-out | **Remaining** |
 | **Admin Portal UI (`/admin`)** | Planned route in `client/js/main.js` | Frontend moderation dashboard connecting to existing `/api/admin/*` endpoints for group approvals | **Remaining** |
@@ -185,11 +185,10 @@ The project uses the following technologies across `client/` and `server/`:
 
 ## 8. Remaining Work
 
-With the backend server (`server/`) fully functional and the 5 core screens, auth flow, forms, and calendar/maps APIs working in `client/`, the following tasks remain prior to final project submission:
+With the GitHub repository established, the live site deployed on Vercel, the backend server (`server/`) functional, and the 5 core screens, auth flow, forms, and calendar/maps APIs working in `client/`, the following tasks remain prior to final project submission:
 
 | Remaining Task | Description | Target Completion |
 | :--- | :--- | :--- |
-| **Set Up New GitHub Repository** | Create and push the project to a new GitHub repository and verify Vercel deployments (`client/vercel.json`, `server/vercel.json`) | Nov. 15, 2026 |
 | **Build Dedicated Discover Page (`/discover`)** | Add a dedicated full-catalog search and filter screen with expanded campus event categories | Nov. 17, 2026 |
 | **Build Profile & Settings Page (`/profile`)** | Implement the user profile dashboard with live Going/Saved/Group counts, favorite category preferences, notification toggles, and *Sign out of all devices* | Nov. 19, 2026 |
 | **Build Admin Approval Portal (`/admin`)** | Implement the frontend admin portal connected to the existing `/api/admin/*` endpoints to approve/reject pending group requests and manage featured events | Nov. 21, 2026 |
@@ -214,6 +213,7 @@ Testing of the current checkpoint build (`client/` connected to the Express + Mo
 
 ## 10. Current Working Version
 
-* **GitHub Repository URL:** *To be established — setting up a new GitHub repository for the project.*
+* **GitHub Repository URL:** [FinalProject-INST630](https://github.com/jahnavi5-umd/FinalProject-INST630) (`https://github.com/jahnavi5-umd/FinalProject-INST630`)
+* **Published Site URL:** [TerpEvents](https://terpevents-ui.vercel.app/) (`https://terpevents-ui.vercel.app/`)
 * **Backend API Server URL (`server/`):** `http://localhost:5000` (Fully functional Express + MongoDB backend server; Vercel config ready in `server/vercel.json`)
-* **Client Application (`client/`) URL:** `http://localhost:3000` (Served by `client/dev-server.js`, proxying `/api/*` to `http://localhost:5000/api`; static production bundle built to `client/dist/` via `npm run build`)
+* **Local Client Development URL (`client/`):** `http://localhost:3000` (Served by `client/dev-server.js`, proxying `/api/*` to `http://localhost:5000/api`; static production bundle built to `client/dist/` via `npm run build`)
